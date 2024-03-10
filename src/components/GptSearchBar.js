@@ -20,8 +20,8 @@ const GptSearchBar = () => {
               messages: [{ role: 'user', content: gptQuery }],
               model: 'gpt-3.5-turbo',
             });
-            console.log(searchText.current.value);
-            if(!gptResults.choices) alert("phatt gyi API.");
+        
+            if(!gptResults.choices) alert("No result fetched from API.");
           const gptMovies = gptResults.choices?.[0]?.message?.content.split(","); 
 
           // For each movie we will search TMDB API.
